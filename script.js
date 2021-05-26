@@ -7,9 +7,9 @@ Write a function for changing the title of the document in something else.
 const changeTitle = function (newTitle) {
     let h1 = document.querySelector("h1")
     
-    h1.innerText = "M1-D8-Homework"
+    h1.innerText = newTitle
 };
-changeTitle()
+changeTitle("M1-D8-Homework")
 
 
 /* EXERCISE 2
