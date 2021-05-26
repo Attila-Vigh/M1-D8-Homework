@@ -6,6 +6,7 @@ Write a function for changing the title of the document in something else.
 */
 const changeTitle = function (newTitle) {
     let h1 = document.querySelector("h1")
+    
     h1.innerText = "M1-D8-Homework"
 };
 changeTitle()
@@ -16,8 +17,11 @@ Write a function for changing the class of the title of the page in "myHeading".
 */
 
 const addClassToTitle = function () {
-//
+    let h1 = document.querySelector("h1")
+
+    h1.classList.toggle("myHeading")
 };
+addClassToTitle()
 // addClassToTitle()
 
 /* EXERCISE 3
