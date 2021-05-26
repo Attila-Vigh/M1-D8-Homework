@@ -106,7 +106,7 @@ Make the heading of the page change color every time the user clicks on it.
 
 const makeItClickable = function () {
     let header = document.querySelector("header")
-   
+
     header.onclick = function () {
         let color = "#" +  Math.floor(Math.random()*16777215).toString(16)
         header.style.backgroundColor = color
@@ -142,7 +142,7 @@ Create a new welcome alert message when the page successfully loads.
 */
 
 window.onload = function () {
-    
+    alert("Page succesfully loadded!")
 };
 
 
