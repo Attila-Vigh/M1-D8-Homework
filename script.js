@@ -29,9 +29,10 @@ Write a function for changing the text of only the p which are children of a div
 */
 
 const changePcontent = function (newParagraph) {
-    let h1 = document.querySelector("div>p")
+    let pChidrenOfDiv = document.querySelectorAll("div>p")
     
-    h1.innerText = newParagraph
+    for (const p of pChidrenOfDiv)
+        p.innerText = newParagraph
 };
 changePcontent("New pragraph added via Javascript")
 
@@ -142,7 +143,7 @@ Create a new welcome alert message when the page successfully loads.
 */
 
 window.onload = function () {
-    alert("Page succesfully loadded!")
+    // alert("Page succesfully loadded!")
 };
 
 
