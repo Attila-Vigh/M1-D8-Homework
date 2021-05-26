@@ -106,6 +106,7 @@ Make the heading of the page change color every time the user clicks on it.
 
 const makeItClickable = function () {
     let header = document.querySelector("header")
+   
     header.onclick = function () {
         let color = "#" +  Math.floor(Math.random()*16777215).toString(16)
         header.style.backgroundColor = color
@@ -118,9 +119,11 @@ Change the footer text with something else when the user clicks on it.
 */
 
 const changeFooterText = function () {
-//
+    let footer = document.querySelector("footer")
+    
+    footer.onclick = () => footer.innerText = "This is your new footer!!!!"
 };
-// changeFooterText()
+changeFooterText()
 
 /* EXERCISE 11
 Attach an event listener to the input field in the page for console logging its value just after any keystroke.
@@ -136,7 +139,7 @@ Create a new welcome alert message when the page successfully loads.
 */
 
 window.onload = function () {
-//
+    
 };
 
 
