@@ -1,4 +1,8 @@
 body {
   color: #818181;
 }
+
+body .myHeading {
+  color: red;
+}
 /*# sourceMappingURL=style.css.map */
