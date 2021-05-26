@@ -52,9 +52,16 @@ Write a function for adding a new item in the second list.
 */
 
 const addToTheSecond = function (content) {
-//
+    let secondList = document.querySelector("#secondList")
+    let li = document.createElement("LI")
+
+    content = document.createTextNode(content)
+    
+    let listWithContent = li.appendChild(content)
+    secondList.appendChild( listWithContent )
+    console.log( secondList );
 };
-// addToTheSecond()
+addToTheSecond("New contet added into the second list")
 
 /* EXERCISE 6
 Write a function for adding a second paragraph to the div.
