@@ -56,10 +56,9 @@ const addToTheSecond = function (content) {
     let li = document.createElement("LI")
 
     content = document.createTextNode(content)
-    
+
     let listWithContent = li.appendChild(content)
     secondList.appendChild( listWithContent )
-    console.log( secondList );
 };
 addToTheSecond("New contet added into the second list")
 
@@ -68,9 +67,15 @@ Write a function for adding a second paragraph to the div.
 */
 
 const addParagraph = function (content) {
-//
+    let div = document.querySelector("div")
+    let p = document.createElement("p")
+
+    content = document.createTextNode("This is the content of the new paragraph added to this div")
+    
+    let pWithContent = p.appendChild(content)
+    div.appendChild( pWithContent )
 };
-// addParagraph()
+addParagraph()
 
 /* EXERCISE 7
 Write a function for making the first UL disappear.
