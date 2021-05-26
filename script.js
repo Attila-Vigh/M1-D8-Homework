@@ -129,9 +129,12 @@ changeFooterText()
 Attach an event listener to the input field in the page for console logging its value just after any keystroke.
 */
 
-const inputField = document.getElementById("input-field");
-// ...
-// inputField()
+const inputField = () => { 
+    const inputField = document.getElementById("input-field")
+
+    inputField.onkeyup = () => console.log( inputField.value);
+}
+inputField()
 
 
 /* EXERCISE 12
