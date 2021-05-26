@@ -1,4 +1,4 @@
-document.querySelector("body").style.backgroundColor = "black"
+// document.querySelector("body").style.backgroundColor = "black"
 
 
 /* EXERCISE 1
@@ -53,13 +53,9 @@ Write a function for adding a new item in the second list.
 */
 
 const addToTheSecond = function (content) {
-    let secondList = document.querySelector("#secondList")
-    let li = document.createElement("LI")
+    let secondList = document.querySelector("ul#secondList")
 
-    content = document.createTextNode(content)
-
-    let listWithContent = li.appendChild(content)
-    secondList.appendChild( listWithContent )
+    secondList.insertAdjacentHTML('beforeend', `<li>${content}</li>` )
 };
 addToTheSecond("New contet added into the second list")
 
@@ -67,14 +63,11 @@ addToTheSecond("New contet added into the second list")
 Write a function for adding a second paragraph to the div.
 */
 
-const addParagraph = function (content) {
-    let div = document.querySelector("div")
-    let p = document.createElement("p")
-
-    content = document.createTextNode("This is the content of the new paragraph added to this div")
-
-    let pWithContent = p.appendChild(content)
-    div.appendChild( pWithContent )
+const addParagraph = function () {
+    let divp = document.querySelector("div>p")
+    
+    for (let i = 1; i <= 5; i++) 
+        divp.insertAdjacentHTML('afterend', `<p>It should add 5 paragraphs conting back from the last ${i}</p>`)
 };
 addParagraph()
 
@@ -110,6 +103,7 @@ const makeItClickable = function () {
 
     header.onclick = function () {
         let color = "#" +  Math.floor(Math.random()*16777215).toString(16)
+        
         header.style.backgroundColor = color
     }
 }
@@ -133,7 +127,10 @@ Attach an event listener to the input field in the page for console logging its 
 const inputField = () => { 
     const inputField = document.getElementById("input-field")
 
-    inputField.onkeyup = () => console.log( inputField.value);
+    const inputFieldValue = () => console.log( inputField.value)
+    
+    inputField.onkeyup = inputFieldValue
+    inputField.addEventListener( "keyup", inputFieldValue)
 }
 inputField()
 
