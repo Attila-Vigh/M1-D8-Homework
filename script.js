@@ -71,7 +71,7 @@ const addParagraph = function (content) {
     let p = document.createElement("p")
 
     content = document.createTextNode("This is the content of the new paragraph added to this div")
-    
+
     let pWithContent = p.appendChild(content)
     div.appendChild( pWithContent )
 };
@@ -82,9 +82,11 @@ Write a function for making the first UL disappear.
 */
 
 const firstUlDisappear = function () {
-//
+    let firstList = document.querySelector("#firstList")
+
+    firstList.style.display = "none"
 };
-// firstUlDisappear()
+firstUlDisappear()
 
 /* EXERCISE 8
 Write a function for making the background of every UL green.
