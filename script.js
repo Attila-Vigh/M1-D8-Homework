@@ -28,10 +28,12 @@ addClassToTitle()
 Write a function for changing the text of only the p which are children of a div.
 */
 
-const changePcontent = function () {
-//
+const changePcontent = function (newParagraph) {
+    let h1 = document.querySelector("div>p")
+    
+    h1.innerText = newParagraph
 };
-// changePcontent()
+changePcontent("New pragraph added via Javascript")
 
 /* EXERCISE 4
 Write a function for changing the destination of every link to https://www.google.com
