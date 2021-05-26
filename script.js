@@ -40,10 +40,10 @@ Write a function for changing the destination of every link to https://www.googl
 */
 
 const changeUrls = function () {
-    let links = document.querySelectorAll("a")
+    let links = document.querySelectorAll("a")  // Get all links
     
-    for (const link of links)
-        link.href = "https://www.google.com"
+    for (const link of links)                   // Loop over each link
+        link.href = "https://www.google.com"    // On the current link repace the current value of the attribute/property href with a new value called "https://www.google.com"
 };
 changeUrls()
 
