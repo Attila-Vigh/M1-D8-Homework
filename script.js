@@ -40,9 +40,12 @@ Write a function for changing the destination of every link to https://www.googl
 */
 
 const changeUrls = function () {
-//
+    let links = document.querySelectorAll("a")
+    
+    for (const link of links)
+        link.href = "https://www.google.com"
 };
-// changeUrls()
+changeUrls()
 
 /* EXERCISE 5
 Write a function for adding a new item in the second list.
